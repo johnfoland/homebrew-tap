@@ -6,8 +6,8 @@ cask "claudebar" do
   # fails the checksum comparison rather than skipping it, so a tap published
   # before its first release refuses to install instead of installing something
   # unverified. scripts/bootstrap-tap.sh fills in the real values.
-  version "0.4.73-fork.4"
-  sha256 "7bee527707e26f13eac2e5e752c87e3d1b4158a1990d91a646141e6a52ee6f71"
+  version "0.4.85-fork.1"
+  sha256 "112c6f2e96bfd8291723ecdc7055a41049d96f44d408bbe79df2298d8f586140"
 
   url "https://github.com/johnfoland/ClaudeBar/releases/download/fork-v#{version}/ClaudeBar-#{version}.zip",
       verified: "github.com/johnfoland/ClaudeBar/"
