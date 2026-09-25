@@ -1,9 +1,10 @@
 # johnfoland/homebrew-tap
 
-Homebrew tap for my macOS apps.
+Homebrew tap for my apps and tools.
 
 ```bash
 brew install --cask johnfoland/tap/claudebar
+brew install johnfoland/tap/corral-herdr
 ```
 
 ## ClaudeBar
@@ -63,9 +64,29 @@ brew uninstall --cask johnfoland/tap/claudebar         # remove the app
 brew uninstall --zap --cask johnfoland/tap/claudebar   # also settings, logs, caches
 ```
 
+## corral
+
+[corral](https://github.com/johnfoland/corral) rounds up your projects into
+[herdr](https://herdr.dev) workspaces, from a TUI or a CLI. The formula is
+`corral-herdr` (its PyPI name) because homebrew/core's `corral` is the Pony
+package manager; both install a `corral` binary, so they conflict.
+
+herdr is not a dependency, so installing corral never upgrades a running
+herdr. Install it with `brew install herdr`.
+
+To update the formula after a PyPI release, bump `url`/`sha256` to the new
+sdist, then refresh the dependency resources:
+
+```bash
+brew update-python-resources corral-herdr
+```
+
+It ignores packages uploaded in the last 24 hours, so wait a day after the
+release, or copy versions from corral's `uv.lock`.
+
 ## How this tap stays current
 
-`.github/workflows/update-cask.yml` checks hourly for a new `fork-v*` release in
+For ClaudeBar, `.github/workflows/update-cask.yml` checks hourly for a new `fork-v*` release in
 `johnfoland/ClaudeBar`, downloads the asset, hashes it, and commits the new
 `version` and `sha256`. It needs no secrets — polling from this side means the
 built-in `GITHUB_TOKEN` is enough.
