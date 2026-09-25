@@ -3,8 +3,8 @@ class CorralHerdr < Formula
 
   desc "Round up your projects into herdr workspaces"
   homepage "https://github.com/johnfoland/corral"
-  url "https://files.pythonhosted.org/packages/b0/9e/0f7c8bd357e95e4603dbc869235bcd8eb96a39f434319846df890687d056/corral_herdr-0.1.0.tar.gz"
-  sha256 "e9f5c0cb7782dc1ff473d0d9aef7689092a2b8089e6edf2e4e5eb1b0109e176d"
+  url "https://files.pythonhosted.org/packages/91/a1/55bf3a971adf7c1c09bf4b813acf3a082d0c9d5983ad3ef1bb0a9ef6c790/corral_herdr-0.1.1.tar.gz"
+  sha256 "537f5d9bf58bd16ce80e746b1535f721abcbcf6353e9a7513025d84ff9fdafc9"
   license "MIT"
 
   depends_on "python@3.14"
