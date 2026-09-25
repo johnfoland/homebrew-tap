@@ -3,8 +3,8 @@ class CorralHerdr < Formula
 
   desc "Round up your projects into herdr workspaces"
   homepage "https://github.com/johnfoland/corral"
-  url "https://files.pythonhosted.org/packages/91/a1/55bf3a971adf7c1c09bf4b813acf3a082d0c9d5983ad3ef1bb0a9ef6c790/corral_herdr-0.1.1.tar.gz"
-  sha256 "537f5d9bf58bd16ce80e746b1535f721abcbcf6353e9a7513025d84ff9fdafc9"
+  url "https://files.pythonhosted.org/packages/6c/46/f574810aa8f258185c9a46fb70395d3af58a550c7e8c2c771559cdf15269/corral_herdr-0.2.0.tar.gz"
+  sha256 "60e3e3b1d33345987b53b847eef4473b12ad6ade6f0131c6983d7b8e4ea49616"
   license "MIT"
 
   depends_on "python@3.14"
@@ -49,6 +49,11 @@ class CorralHerdr < Formula
   resource "textual" do
     url "https://files.pythonhosted.org/packages/00/21/39a76b01bd5eea82a04baaca7580e105d8c59450df03998345bb2cfb307b/textual-8.2.8.tar.gz"
     sha256 "3f106a9fbc73e39dd266c9712432087de78a6d644084c7c241d6a25c3169115b"
+  end
+
+  resource "tomlkit" do
+    url "https://files.pythonhosted.org/packages/94/96/e07752635b98536177fa1f37671c8f3cdde2e724c6bcf6034b2cfb571565/tomlkit-0.15.1.tar.gz"
+    sha256 "e25bbf38843005246210a12982776f27f99cb9be67160e14434d0c0d21ee1e97"
   end
 
   resource "typing-extensions" do
