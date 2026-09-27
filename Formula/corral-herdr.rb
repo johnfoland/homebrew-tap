@@ -3,8 +3,8 @@ class CorralHerdr < Formula
 
   desc "Round up your projects into herdr workspaces"
   homepage "https://github.com/johnfoland/corral"
-  url "https://files.pythonhosted.org/packages/d1/aa/e27a84aa6a911f742ead1f9a79f0be64280f0cc48da7c28c925240c6dc86/corral_herdr-0.4.0.tar.gz"
-  sha256 "ae07bc1b92e289b4854ab26ba0774cf21aca7dba5c0739a84e5bfb6d036f550c"
+  url "https://files.pythonhosted.org/packages/69/c5/d6e713e1d7ccd9ff756c3567ee775a2c448d259bca9f525d7d51669a2cb8/corral_herdr-0.5.0.tar.gz"
+  sha256 "fb819d8027ff2d1cbd34a83cec42d125a2eb97a5b0f7deed5a1a87e8a167a3b1"
   license "MIT"
 
   depends_on "python@3.14"
@@ -70,6 +70,11 @@ class CorralHerdr < Formula
       corral drives herdr (https://herdr.dev), which is not installed as a
       dependency so that installing corral never upgrades a running herdr:
         brew install herdr
+
+      Its utility tab runs yazi (a file manager) and lazygit (a git UI) when
+      they're installed. `corral tools` shows their status, and
+        corral tools install
+      installs the missing ones.
     EOS
   end
 
