@@ -4,7 +4,6 @@ Homebrew tap for my apps and tools.
 
 ```bash
 brew install --cask johnfoland/tap/claudebar
-brew install johnfoland/tap/corral-herdr
 ```
 
 ## ClaudeBar
@@ -66,23 +65,10 @@ brew uninstall --zap --cask johnfoland/tap/claudebar   # also settings, logs, ca
 
 ## corral
 
-[corral](https://github.com/johnfoland/corral) rounds up your projects into
-[herdr](https://herdr.dev) workspaces, from a TUI or a CLI. The formula is
-`corral-herdr` (its PyPI name) because homebrew/core's `corral` is the Pony
-package manager; both install a `corral` binary, so they conflict.
-
-herdr is not a dependency, so installing corral never upgrades a running
-herdr. Install it with `brew install herdr`.
-
-To update the formula after a PyPI release, bump `url`/`sha256` to the new
-sdist, then refresh the dependency resources:
-
-```bash
-brew update-python-resources corral-herdr
-```
-
-It ignores packages uploaded in the last 24 hours, so wait a day after the
-release, or copy versions from corral's `uv.lock`.
+`corral-herdr` moved to [chocs-cat/tap](https://github.com/chocs-cat/homebrew-tap)
+along with [corral](https://github.com/chocs-cat/corral) itself. Install it with
+`brew install chocs-cat/tap/corral-herdr`; an existing install from this tap
+moves over on its own at the next `brew update` (see `tap_migrations.json`).
 
 ## How this tap stays current
 
